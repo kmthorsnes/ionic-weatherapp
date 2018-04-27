@@ -1,7 +1,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Settings</ion-title>
+    <ion-title>Innstillinger</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -15,17 +15,17 @@
           <form (ngSubmit)="saveForm()">
             <ion-item>
               <ion-label fixed>
-                City
+                By
               </ion-label>
               <ion-input [(ngModel)]="city" name="city" type="text"></ion-input>
             </ion-item>
             <ion-item>
               <ion-label fixed>
-                State
+                Stat
               </ion-label>
               <ion-input [(ngModel)]="state" name="state" type="text"></ion-input>
             </ion-item>
-            <button ion-button type="submit" block>Save Changes</button>
+            <button ion-button type="submit" block>Lagre</button>
           </form>
         </ion-list>
       </ion-col>
