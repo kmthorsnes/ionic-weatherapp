@@ -11,7 +11,7 @@ export class HomePage {
   weather:any;
   location:{
     city:string,
-    state:string
+    country:string
   }
 
   constructor(
@@ -27,13 +27,13 @@ export class HomePage {
               this.location = JSON.parse(val);
             } else {
               this.location = {
-                city: 'Miami',
-                state: 'FL'
+                city: 'Oslo',
+                country: 'NO'
               }
             }
 
-            this.weatherProvider.getWeather(this.location.city, this.location.state)  .subscribe(weather => {
-                this.weather = weather.current_observation;
+            this.weatherProvider.getWeather(this.location.city, this.location.country)  .subscribe(weather => {
+                console.log(weather);
               });
           });
 

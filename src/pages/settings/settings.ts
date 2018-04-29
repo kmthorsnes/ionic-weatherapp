@@ -10,7 +10,7 @@ import { HomePage } from '../home/home';
 })
 export class SettingsPage {
   city:string;
-  state:string;
+  country:string;
 
 
   constructor(
@@ -22,10 +22,10 @@ export class SettingsPage {
         if(val!= null){
           let location = JSON.parse(val);
           this.city = location.city;
-          this.state = location.state;
+          this.country = location.country;
         } else {
-          this.city = 'Miami';
-          this.state = 'FL';
+          this.city = 'Oslo';
+          this.country = 'NO';
         }
       });
 
@@ -38,7 +38,7 @@ export class SettingsPage {
   saveForm() {
     let location = {
       city: this.city,
-      state: this.state
+      country: this.country
     }
     this.storage.set('location', JSON.stringify(location));
     this.navCtrl.push(HomePage);
